@@ -18,11 +18,12 @@ class Mammal:
 
 
 
-m = Mammal("Cat")
 
 print(Mammal.getInstance())
 
-print(m)
+m = Mammal("Cat")
+
+print(Mammal.getInstance())
 
 print(m.type())
 
