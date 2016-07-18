@@ -1,7 +1,15 @@
 class Mammal:
 
+    __instance = None
+
+    # Static Methods
+    @staticmethod
+    def getInstance():
+        return Mammal.__instance
+
     def __init__(self,mammal_type):
         self.mammal_type = mammal_type
+        Mammal.__instance = self
 
     def type(self,mammal_type = None):
         if mammal_type:
@@ -11,6 +19,8 @@ class Mammal:
 
 
 m = Mammal("Cat")
+
+print(Mammal.getInstance())
 
 print(m)
 
