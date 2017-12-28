@@ -22,7 +22,7 @@ lst1 = [(1, 3), (3, 2), (2, 1)]
 lst2 = [(1, 7), (1, 3), (3, 4, 5), (2, 2)]
 
 def sortList(lst):
-    lst.sort(key=lambda element: element[1])
+    lst.sort(key=lambda element: element[-1])
     return lst
 
 print("\nPython Assignment #4")
