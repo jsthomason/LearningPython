@@ -50,7 +50,7 @@ print("\nPython Assignment #7\n")
 
 sd = revSortDictByVal(freqOfOccurrence(str1))
 for e in range(0,5):
-    print("{0} - {1}, is #{2}".format(sd[e][0], sd[e][1], e+1))
+    print("{0} --> {1}, is #{2}".format(sd[e][0], sd[e][1], e+1))
 
 
 sys.exit(0)
