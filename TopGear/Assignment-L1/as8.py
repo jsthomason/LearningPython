@@ -20,25 +20,43 @@ def buildDict(theStr):
     theDict = {}
     theList = []
     punct = '., \n()'
+    #
+    # Turn the passed string into a list of words; punctuation stripped
     for word in theStr.split(' '):
         word = word.lstrip(punct).rstrip(punct)
         theList.append(word)
 
+    #
+    # Iterate 'theList' and build the dictionary(theDict)
     for i in range(0,len(theList)):
+        # see if the 'word' is already in the dictionary
+        if theList[i] in theDict:
+            tmpList = theDict[theList[i]]
+            # if we are not at the end of the list...
+            if i < (len(theList)-1):
+                # if the word is not already in the list...
+                if theList[i+1] not in tmpList:
+                    # append the next word to the list
+                    tmpList.append(theList[i+1])
+            # update the dictionary with the new list of words
+            theDict[theList[i]] = tmpList
+        # if not; add the word(key) to the dictionary using a list as the value
+        else:
+            if i < (len(theList)-1):
+                theDict.update({theList[i]:[theList[i+1]]})
 
-        #if word in theDict:
-        #    tmpLst = theDict.get(word)
-        #    tmpLst.append(word)
-        #    theDict[word] = tmpLst
-        #else:
-        #    theDict.update({word:[word]})
+    return theDict
 
-    return theList
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+results = buildDict(str1)
 
 print("\nPython Assignment #8")
 
-#print("\n{0}".format(str1))
-print("{0}".format(str(buildDict(str1))))
-
+print("\nDict Len: " + str(len(results)))
+# iterate over the results printing each word in the dictionary followed by it's list of values
+for k, v in results.items():
+    print("{0:16}: {1}".format(str(k), str(v)))
 
 sys.exit(0)
+
