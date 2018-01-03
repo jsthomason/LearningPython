@@ -9,27 +9,16 @@ import sys, os
 # Sort the list based on the top level domain (edu, com, org, in) using custom sorting
 
 
-unsorted_urls = ["www.annauniv.edu", "www.google.com", "www.ndtv.com", "www.website.org", "www.bis.org.in", "www.rbi.org.in"]
+unsorted_urls = ["www.annauniv.edu", "www.foodnetwork.tv", "www.google.com", "www.ndtv.com", "www.website.org", "www.bis.org.in", "www.rbi.org.in"]
 
-sorted_urls   = []
+def sortURLs(unsorted_urls):
+    return sorted(unsorted_urls, key=lambda se: se.split('.')[-1])
 
 
-def sortURLs(urls):
-    if isSorted(urls): return sorted_urls
-    
+print("\nPython Assignment #1\n")
 
-def isSorted(urls):
-    result = True
-
-    if type(urls) == list:
-        for url in urls:
-            print(url.split('.')[-1])
-            result = True
-
-    return result
-
-sortURLs(unsorted_urls)
+print("UnSorted: {0}".format(str(unsorted_urls)))
+print("Sorted:   {0}".format(str(sortURLs(unsorted_urls))))
 
 sys.exit(0)
-
 
