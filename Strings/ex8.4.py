@@ -1,17 +1,18 @@
+#!/usr/bin/python3
+"""
 # Strings
 # Find Function modifed
+"""
 
-import cmd2 as cmd
-import twython
-
-c = cmd.Cmd()
-
-c.do_history()
-
+# find function
 def find(word, letter, index=0):
-    while( index < len(word) ):
-       if( word[index] == letter):
-           return index
+    """
+    find() -- find func
+    """
+    while index < len(word):
+        if word[index] == letter:
+            return index
+        else: index += 1
 
     return -1
 

@@ -1,13 +1,12 @@
+#!/usr/bin/python3
 # Strings
+'''Is this a doc string???'''
 
-prefixes='JKLMNOPQ'
-suffix='ack'
+PF = 'JKLMNOPQ'
+SF = 'ack'
 
-for l in prefixes:
-    if(l == 'O' or l == 'Q'):
-        print(l + 'u' + suffix)
+for l in PF:
+    if l == 'O' or l == 'Q':
+        print(l + 'u' + SF)
     else:
-        print(l + suffix)
-
-
-
+        print(l + SF)
