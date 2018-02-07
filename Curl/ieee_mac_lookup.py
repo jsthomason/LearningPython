@@ -9,7 +9,7 @@ import csv
 import re
 
 files    = {"oui":"oui.csv","oui28":"mam.csv","oui36":"oui36.csv"}
-csv_dict = dict()
+url      = "http://standards-oui.ieee.org/"
 cached   = False
 mal      = None
 mam      = None
@@ -24,9 +24,8 @@ def get_fresh_files():
     http://standards-oui.ieee.org/oui28/mam.csv
 
     """
-    global files
+    global files, url
     ec    = 0
-    url   = "http://standards-oui.ieee.org/"
 
     for din, fin in files.items():
         print("\n" + url + din + "/" + fin)
@@ -106,9 +105,10 @@ def open_csv(name):
     open_csv(name)
     Open csv(MAC DB) for searching
     
-    params: name - file name to open
+    params:  name     - file name to open
+    returns: csv_dict - dictionary of MAC OID(key); Vendor(value)
     """
-    global csv_dict
+    csv_dict = dict()
     try:
         with open(name, newline='') as csvfile:
             readCSV = csv.reader(csvfile)
@@ -156,19 +156,20 @@ else:
             get_fresh_files()
     
         elif len(arg) >= 12 and len(arg) <= 17:
-            #print("DB Cached? " + str(cached))
             cache_db()
-            arg = strip_sep(arg)
-            if len(arg) == 12:
+            mac = strip_sep(arg)
+            if len(mac) == 12:
                 # key in dict 
-                if mas_mac(arg).upper() in mas:
-                    print("{0}\n{1}\n".format(arg, mas[mas_mac(arg).upper()]))
-                    continue
-                if mam_mac(arg).upper() in mam:
-                    print("{0}\n{1}\n".format(arg, mam[mam_mac(arg).upper()]))
-                    continue
-                if mal_mac(arg).upper() in mal:
-                    print("{0}\n{1}\n".format(arg, mal[mal_mac(arg).upper()]))
+                print(arg)
+                if mas_mac(mac).upper() in mas:
+                    print("{0}".format(mas[mas_mac(mac).upper()]))
+                elif mam_mac(mac).upper() in mam:
+                    print("{0}".format(mam[mam_mac(mac).upper()]))
+                elif mal_mac(mac).upper() in mal:
+                    print("{0}".format(mal[mal_mac(mac).upper()]))
+                else:
+                    print("{0}".format("UnKnown..."))
+                print("")
 
             else:
                 format_error(arg)
