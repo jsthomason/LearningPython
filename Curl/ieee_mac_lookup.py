@@ -102,10 +102,11 @@ def format_error(arg):
 def usage():
     """Display Script Usage & Exit"""
     print()
-    print("Usage: {0} [-h|--help] [-u|--update] [-i|--ifile <input_file>] [<MAC_Address> <MAC_Address>]".format(sys.argv[0]))
-    print("       -h|--help   -- Display this usage")
-    print("       -u|--update -- Update the MAC Address Database")
-    print("       -i|--ifile  -- Input file of MAC addresses one per line")
+    print("Usage: {0} [-h|--help] [-u|--update] [-i|--ifile <input_file>] [-f|--filter <word>] [<MAC_Address> <MAC_Address>]".format(sys.argv[0]))
+    print("       -h|--help               -- Display this usage")
+    print("       -u|--update             -- Update the MAC Address Database")
+    print("       -i|--ifile <input_file> -- Name of input file containing MAC addresses one per line")
+    print("       -f|--filter <word>      -- Word to filter results; typically a company name and used in conjunction with '-i' option to filter the results of numerous entries")
     print("       MAC_Address -- System(s) MAC Address(es); One or more MAC addresses")
     print()
     sys.exit(2)
@@ -175,7 +176,8 @@ def main(argv):
     params: argv - a list of options and arguments
     returns: exit code 0  
     """
-    ifile = None 
+    ifile   = None 
+    ifilter = None
     
     # Got Args???
     if len(argv) == 0:
@@ -189,12 +191,18 @@ def main(argv):
 
     # Parse the CLI Options
     for opt, opt_arg in opts:
+        # Help - Display Usage
         if opt == '-h':
             usage()
-        elif opt in ("-i", "--ifile"):
-            ifile = opt_arg 
+        # Update the MAC DB
         elif opt in ("-u", "--update"):
             get_fresh_files()
+        # Input File
+        elif opt in ("-i:", "--ifile="):
+            ifile = opt_arg 
+        # Filter Results
+        elif opt in ("-f:", "--filter="):
+            ifilter = opt_arg
 
     # Got Input File?
     if ifile:
