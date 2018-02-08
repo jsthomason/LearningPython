@@ -4,20 +4,20 @@ ieee_mac_lookup.py
 Use the IEEE MAC registration listings to lookup MAC to Vendor resolution.
 """
 import pycurl as pc
+import getopt as go
 import sys
 import csv
 import re
 
-files    = {"oui":"oui.csv","oui28":"mam.csv","oui36":"oui36.csv"}
-url      = "http://standards-oui.ieee.org/"
-cached   = False
-mal      = None
-mam      = None
-mas      = None
+files   = {"oui":"oui.csv","oui28":"mam.csv","oui36":"oui36.csv"}
+url     = "http://standards-oui.ieee.org/"
+cached  = False
+mal     = None
+mam     = None
+mas     = None
 
 def get_fresh_files():
     """
-    get_fresh_copy()
     Get a fresh copy of the IEEE MAC .csv files
     http://standards-oui.ieee.org/oui/oui.csv
     http://standards-oui.ieee.org/oui36/oui36.csv
@@ -46,59 +46,70 @@ def get_fresh_files():
 
 def strip_sep(mac):
     """
-    strip_sep(mac)
     Strip the MAC address separators
-    params mac - pass mac in any form...
+    params: mac - pass mac in any form...
     aa:bb:cc:dd:ee:ff
     aa-bb-cc-dd-ee-ff
     aabb.ccdd.eeff
     aabbccddeeff
 
-    returns mac - with separators removed
+    params: mac - Raw MAC Addr
+    returns: mac - with separators removed
     """
     return re.sub('[-|.|:]', '', mac)
 
 def mal_mac(mac):
     """
-    mal_mac(mac)
     Parse the MAC address in a usable lookup form...
-    
     DB Search requires this format...
     aabbcc    MA-L
 
-    returns mac - in MA-L format
+    params: mac - Raw MAC Addr
+    returns: mac - in MA-L format
     """
     return mac[0:6]
 
 
 def mam_mac(mac):
     """
-    mam_mac(mac)
     Parse the MAC address in a usable lookup form...
     
     DB Search requires this format...
     aabbccd   MA-M
 
-    returns mac - in MA-M format
+    params: mac - Raw MAC Addr
+    returns: mac - in MA-M format
     """
     return mac[0:7]
 
 
 def mas_mac(mac):
     """
-    mas_mac(mac)
     Parse the MAC address in a usable lookup form...
     
     DB Search requires this format...
     aabbccdde  MA-S
 
-    returns mac - in MA-S format
+    params: mac - Raw MAC Addr
+    returns: mac - in MA-S format
     """
     return mac[0:9]
 
 def format_error(arg):
     """MAC address format error message"""
     print("\"{0}\" is not a valid MAC address.\n".format(arg))
+
+def usage():
+    """Display Script Usage & Exit"""
+    print()
+    print("Usage: {0} [-h|--help] [-u|--update] [-i|--ifile <input_file>] [<MAC_Address> <MAC_Address>]".format(sys.argv[0]))
+    print("       -h|--help   -- Display this usage")
+    print("       -u|--update -- Update the MAC Address Database")
+    print("       -i|--ifile  -- Input file of MAC addresses one per line")
+    print("       MAC_Address -- System(s) MAC Address(es); One or more MAC addresses")
+    print()
+    sys.exit(2)
+
 
 def open_csv(name):
     """
@@ -136,47 +147,94 @@ def cache_db():
 
     return cached
 
+def parse_ifile(ifile):
+    """
+    Parse the input file, and build a list of MAC addresses
+
+    params: ifile - Input file name
+    returns: macs - List of MAC addresses
+    """
+    macs = []
+    try:
+        fin = open(ifile)
+        for l in fin:
+            macs.append(l.strip())
+        fin.close()
+    except Exception as e:
+        print("\nException opening file: {0}\n{1}\n".format(ifile, str(e)))
+        sys.exit(3)
+
+    return macs
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main() ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#Testing file open...
-#print(open_csv("mam.csv"))
+def main(argv):
+    """
+    Main Method
 
-
-print("\n")
-
-if len(sys.argv) == 1:
-    print("Usage: {0} [update] <MAC_Address> [<MAC_Address>]".format(sys.argv[0]))
-    print("       update      -- Update the MAC Address Database")
-    print("       MAC_Address -- System(s) MAC Address(es); One or more MAC addresses")
-    print("\n")
-
-else:
-    for arg in sys.argv[1:]:
-        if arg == "update":
-            get_fresh_files()
+    params: argv - a list of options and arguments
+    returns: exit code 0  
+    """
+    ifile = None 
     
-        elif len(arg) >= 12 and len(arg) <= 17:
+    # Got Args???
+    if len(argv) == 0:
+        usage() 
+
+    # Try parsing the command line...
+    try:
+        opts, args = go.getopt(argv,"hui:",["ifile=","update"])
+    except go.GetoptError:
+        usage()
+
+    # Parse the CLI Options
+    for opt, opt_arg in opts:
+        if opt == '-h':
+            usage()
+        elif opt in ("-i", "--ifile"):
+            ifile = opt_arg 
+        elif opt in ("-u", "--update"):
+            get_fresh_files()
+
+    # Got Input File?
+    if ifile:
+        args = parse_ifile(ifile)
+
+    # Loop through MAC address(es)
+    for arg in args:
+        if len(arg) >= 12 and len(arg) <= 17:
             cache_db()
             mac = strip_sep(arg)
             if len(mac) == 12:
                 # key in dict 
                 print(arg)
                 if mas_mac(mac).upper() in mas:
-                    print("{0}".format(mas[mas_mac(mac).upper()]))
+                    for m in mas[mas_mac(mac).upper()]:
+                        print(" {0}".format(m))
+
                 elif mam_mac(mac).upper() in mam:
-                    print("{0}".format(mam[mam_mac(mac).upper()]))
+                    for m in mam[mam_mac(mac).upper()]:
+                        print(" {0}".format(m))
+
                 elif mal_mac(mac).upper() in mal:
-                    print("{0}".format(mal[mal_mac(mac).upper()]))
+                    for m in mal[mal_mac(mac).upper()]:
+                        print(" {0}".format(m))
+
                 else:
-                    print("{0}".format("UnKnown..."))
-                print("")
+                    print(" {0}".format("UnKnown..."))
+                print()
 
             else:
                 format_error(arg)
         else:
             format_error(arg)
 
+    # Thumbs Up!
+    sys.exit(0)
+
+# Let's get going...
+if __name__ == "__main__":
+   main(sys.argv[1:])
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-sys.exit(0)
 
