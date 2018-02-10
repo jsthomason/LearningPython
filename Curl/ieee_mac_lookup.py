@@ -185,7 +185,7 @@ def main(argv):
 
     # Try parsing the command line...
     try:
-        opts, args = go.getopt(argv,"hui:",["ifile=","update"])
+        opts, args = go.getopt(argv,"hui:f:",["ifile=","update","ifilter="])
     except go.GetoptError:
         usage()
 
@@ -199,10 +199,10 @@ def main(argv):
             get_fresh_files()
         # Input File
         elif opt in ("-i:", "--ifile="):
-            ifile = opt_arg 
+            ifile = opt_arg[0:255] 
         # Filter Results
         elif opt in ("-f:", "--filter="):
-            ifilter = opt_arg
+            ifilter = opt_arg[0:255]
 
     # Got Input File?
     if ifile:
