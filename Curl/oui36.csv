@@ -494,11 +494,16 @@ MA-S,70B3D57AC,Verity Studios AG,Zürcherstrasse 39 Schlieren  CH 8952
 MA-S,70B3D52A4,GSP Sprachtechnologie GmbH,Teltowkanalstraße 1 Berlin  DE 12247 
 MA-S,70B3D5790,AVI Pty Ltd,9 Pitt Way Booragoon Western Australia AU 6154 
 MA-S,70B3D5FFE,Private,
-MA-S,70B3D5363,Contec DTx,1800 Penn St Suite 1 Melbourne FL US 32901 
-MA-S,70B3D5720,Private,
-MA-S,70B3D564B,Kalfire,Geloërveldweg 21 Belfeld Limburg NL 5951 DH 
 MA-S,70B3D575F,Vocality international T/A Cubic,"Lydling Barn,Lydling Farm,, Puttenham Lane Godalming Surrey GB gu8 6ap "
 MA-S,70B3D58FA,DEA SYSTEM SPA,VIA DELLA TECNICA 6 PIOVENE ROCCHETTE VICENZA IT 36013 
+MA-S,70B3D564B,Kalfire,Geloërveldweg 21 Belfeld Limburg NL 5951 DH 
+MA-S,70B3D5363,Contec DTx,1800 Penn St Suite 1 Melbourne FL US 32901 
+MA-S,70B3D5720,Private,
+MA-S,70B3D521C,Enyx SA,8 rue greneta Paris  FR 75003 
+MA-S,70B3D50AC,RoboCore Tecnologia,Estrada das Lagrimas 1986 sala 22 Sao Caetano do Sul SP BR 09580500 
+MA-S,70B3D5A87,Tornado Modular Systems,Inzhenernaya st. 4a Novosibirsk Novosibirsk RU 630128 
+MA-S,70B3D500A,"FUJICOM Co.,Ltd.","8-10-17-403, HON-chou KOUNOSU-shi SAITAMA-ken JP 3650038 "
+MA-S,70B3D5292,Private,
 MA-S,70B3D5D60,Flintab AB,Kabelvägen 4 Jönköping  SE 55302 
 MA-S,70B3D51B4,5nines,"Avalon Four, Mill Street Cape Town Western Cape ZA 8001 "
 MA-S,70B3D5522,Syncopated Engineering Inc,13136 Williamfield Dr Ellicott City MD US 21042 
@@ -651,7 +656,6 @@ MA-S,70B3D5EE4,O-Net Automation Technology (Shenzhen)Limited,"#35 Cuijing Road,P
 MA-S,70B3D55B5,Lehigh Electric Products Co,6265 Hamilton Blvd Allentown PA US 18106 
 MA-S,70B3D5B8C,ePOINT Embedded Computing Limited,Williamton House Culross Fife GB KY12 8HL 
 MA-S,70B3D540A,"Monroe Electronics, Inc.",100 Housel Avenue Lyndonville NY US 14098 
-MA-S,70B3D5109,DITEST FAHRZEUGDIAGNOSE GMBH,ALTE POSTSTRASSE 152 A-8020 GRAZ AT STEIERMARK 
 MA-S,70B3D5F63,Ars Products,30 Crabtree Lane Woodstock CT US 06281 
 MA-S,70B3D50AA,Wanco Inc,5870 Tennyson St Arvada CO US 80003 
 MA-S,70B3D53ED,Ultra Electronics Sonar System Division,"418, Bridport Road Greenford Middlesex GB UB6 8UA "
@@ -1013,14 +1017,18 @@ MA-S,70B3D5D89,Resolution Systems,1/214 Greenhill Rd Eastwood South Australia AU
 MA-S,70B3D5F06,"WARECUBE,INC","#A-811, 142-10, Saneop-ro, 156beon-gil, Gwonseon-gu Suwon-si  KR 16648 "
 MA-S,70B3D5651,Roxford,PO Box 231851 Encinitas CA US 92023-1851 
 MA-S,70B3D58B4,Scenario Automation,"Rua Paulo Elias, 216 São Carlos São Paulo BR 13564400 "
-MA-S,70B3D58D9,MB connect line GmbH Fernwartungssysteme,Winnettener Straße 6 Dinkelsbuehl Bavaria DE 91550 
 MA-S,70B3D5532,Talleres de Escoriaza SA,"Barrio Ventas, 35 Irun Gipuzkoa ES 20305 "
+MA-S,70B3D58D9,MB connect line GmbH Fernwartungssysteme,Winnettener Straße 6 Dinkelsbuehl Bavaria DE 91550 
 MA-S,70B3D51D1,Eurotek Srl,"Strada Comunale Savonesa, 9 Rivalta Scrivia AL IT 15050 "
-MA-S,70B3D5027,Redcap Solutions s.r.o.,Na Viničních Horách 16 Praha 6  CZ 16000 
 MA-S,001BC5015,Private,
+MA-S,70B3D5027,Redcap Solutions s.r.o.,Na Viničních Horách 16 Praha 6  CZ 16000 
 MA-S,70B3D592F,SiFive,1875 S Grant St San Mateo CA US 94403 
-MA-S,70B3D5037,EIFFAGE ENERGIE ELECTRONIQUE,D937 VERQUIN  FR 62131 
 MA-S,70B3D5A82,Telefrank GmbH,Am Wildengrund 1 Altenambach TH DE 98553 
+MA-S,70B3D5037,EIFFAGE ENERGIE ELECTRONIQUE,D937 VERQUIN  FR 62131 
+MA-S,70B3D577E,"Blue Marble Communications, Inc.","9520 Padgett St, Suite 101 San Diego CA US 92126 "
+MA-S,70B3D5D7C,D.T.S Illuminazione Srl ,"Via Fagnano Selve,  12 / 14 Misano Adriatico  Rimini  IT 47843 "
+MA-S,70B3D53C9,Duerkopp-Adler,Potsdamerstr. 190 Bielefeld  DE 33719 
+MA-S,70B3D5109,DiTEST Fahrzeugdiagnose GmbH,ALTE POSTSTRASSE 152 A-8020 GRAZ AT STEIERMARK 
 MA-S,70B3D5494,Schildknecht AG,Haugweg 26 Murr  DE 71711 
 MA-S,70B3D5BF2,TWIN DEVELOPMENT,FAUBOURG DE BRUXELLES 320 GOSSSELIES  BE 6041 
 MA-S,70B3D5901,ATS-CONVERS,"Yana Fabrittsyusa str., 10 Pskov  RU 180017 "
@@ -1349,7 +1357,6 @@ MA-S,70B3D5B53,"Revolution Retail Systems, LLC",1840 Hutton Drive Ste 130 Carrol
 MA-S,70B3D5C7E,BirdDog Australia,"Unit 1, 8 Theobald St THORNBURY VIC AU 3071 "
 MA-S,70B3D5F03,GMI Ltd,Inchinnan Business Park Renfre  GB PA4 9RG 
 MA-S,70B3D58C2,F-domain corporation,157 Nakayashiki Sobue town Inazawa city  Aichi pref. JP 495-0001 
-MA-S,70B3D56CF,Private,
 MA-S,70B3D572C,"NuRi&G Engineering co,.Ltd.","#66-33, Elevator road, Geochang Industrial Complex Geochang-gun Gyeongsangnam-do KR 50148 "
 MA-S,70B3D5735,Swiss Audio,6 Rue de Saint-Léger Geneva Geneva CH 1205 
 MA-S,70B3D5260,"ModuSystems, Inc",780 Montague Expressway Suite 203 San Jose CA US 95131 
@@ -1389,7 +1396,6 @@ MA-S,70B3D59D0,RJ45 Technologies,"7, rue Roland Martin Champigny sur Marne Franc
 MA-S,70B3D5672,KLEIBER Infrared GmbH,Am Gewände 3 Unterwellenborn Thüringen DE 07333 
 MA-S,70B3D5572,CRDE,ZI DES GRANDS CAMPS MERCUES LOT FR 46090 
 MA-S,70B3D5927,LG Electronics,"2621, Nuambusunhwan-ro, Gangnam-gu, Seoul  KR 135-860 "
-MA-S,70B3D5489,ard sa,Micropolis Bat Clematis Gap France FR 05000 
 MA-S,70B3D52B1,"WIXCON Co., Ltd","Room 803, 77, Seongsuil-ro, Seongdong-gu SEOUL  KR 04790 "
 MA-S,70B3D5B6A,"YUYAMA MFG Co.,Ltd",3-3-1 TOYONAKASHI OSAKA JP 561-0841 
 MA-S,70B3D5579,Chelsea Technologies Group Ltd,"55, Central Avenue West Molesey Surrey GB KT8 2QZ "
@@ -1486,6 +1492,7 @@ MA-S,70B3D587C,Nautel Limited,10089 Peggy's Cove Road Hackett's Cove Nova Scotia
 MA-S,70B3D5D62,Andasis Elektronik San. ve Tic. A.Ş.,"Teknopark İstanbul,  Sanayi Mah, Teknopark Bulvarı, No:1/1C 1206 Pendik/İstanbul İstanbul  TR 34906 "
 MA-S,70B3D5676,samwooeleco,"A-1001,#119,GASAN-DIGITAL 1RO, GEUMCHEON-GU SEOUL  KR 153-773 "
 MA-S,70B3D56B7,Grossenbacher Systeme AG,Spinnereistrasse 10 St. Gallen  CH 9008 
+MA-S,70B3D5489,ard sa,Micropolis Bat Clematis Gap France FR 05000 
 MA-S,70B3D51D0,"Shenzhen INVT Electric Co.,Ltd"," INVT Bldg., GaoFa Scientific Park, Longjing, Nanshan, Shenzhen. Shenzhen Guangdong CN 518055 "
 MA-S,70B3D5400,Vtron Pty Ltd,"Unit 2, 62 Township Drive West West Burleigh Queensland AU 4219 "
 MA-S,70B3D5B2B,Vtron Pty Ltd,"Unit 2, 62 Township Drive West West Burleigh Queensland AU 4219 "
@@ -1525,6 +1532,9 @@ MA-S,70B3D5920,SLAT,11 Rue Jean-Elysée DUPUY Champagne au Mont d'Or Rhône FR 6
 MA-S,70B3D5A9F,Private,
 MA-S,70B3D5FFF,Private,
 MA-S,70B3D54C0,Technica Engineering GmbH,Leopoldstraße 236 Munich  DE 80807 
+MA-S,70B3D51D3,AIROBOT OÜ,Pardi 32-1 Pärnu  EE 80016 
+MA-S,70B3D56CF,Private,
+MA-S,70B3D5478,Touchnet/OneCard,2115 Chapman Rd. Suite 159 Chattanooga TN US 37421 
 MA-S,70B3D566B,Innitive B.V.,Brouwerijstraat 20 Enschede Overijssel NL 7523xd 
 MA-S,70B3D58F6,"Dofuntech Co.,LTD.","RM306, Block E, RD Xinjunhuan,Pujiang Minghang Shanghai CN 201113 "
 MA-S,70B3D5A06,Kopis Mobile LLC,3010 Lakeland Cv Suite M Flowood MS US 39232 
@@ -1982,14 +1992,17 @@ MA-S,70B3D5739,"Zigencorp, Inc",6934 Canby Avenue 107 Reseda CA US 91335
 MA-S,70B3D5526,FlowNet LLC,580 Lake Ave Lancaster NY US 14086 
 MA-S,70B3D5224,Urbana Smart Solutions Pte Ltd,6 Eu Tong Sen Street #06-20 The Central Singapore  SG 059817 
 MA-S,70B3D5B74,OnYield Inc Ltd,"814 Houston Centre, 63 Mody Road Kowloon  HK TST East "
-MA-S,70B3D5656,SonoSound ApS,Malov Byvej 229 Malov Hovedstaden DK 2760 
 MA-S,70B3D5749,Granite River Labs Inc,"3500 Thomas Rd # A,  Santa Clara  US 95054 "
 MA-S,70B3D53AD,CT Company,"Godovikova , 9, Moscow Moscow RUSSIA RU 129085 "
+MA-S,70B3D5656,SonoSound ApS,Malov Byvej 229 Malov Hovedstaden DK 2760 
 MA-S,70B3D5D09,Rishaad Brown,224 Thoreau dr. Apt.D Yorktown VA US 23693 
-MA-S,70B3D51D7,Private,
 MA-S,70B3D52A9,"Power Electronics Espana, S.L.","C/ Leonardo Da Vinci, 24-26 Paterna Valencia ES 46980 "
-MA-S,70B3D5BAF,SYS TEC electronic GmbH,Am Windrad 2 Heinsdorfergrund   DE D-08468 
+MA-S,70B3D51D7,Private,
+MA-S,70B3D5613,Suprock Technologies,45 Scott Hill Rd Warren NH US 03279 
 MA-S,70B3D57D6,Yukilab,"1-7-3 Sekiya-Matsunami, Chuo Niigata Niigata JP 951-8161 "
+MA-S,70B3D5BAF,SYS TEC electronic GmbH,Am Windrad 2 Heinsdorfergrund   DE D-08468 
+MA-S,70B3D5A37,"MITSUBISHI HEAVY INDUSTRIES THERMAL SYSTEMS, LTD.","3-1, Asahi, Nishibiwajima-Cho Kiyosu Aichi JP 452-8561 "
+MA-S,70B3D54EC,"Hangzhou Youshi Industry Co., Ltd.","Unit 501-38, Blue Sky Business Centre，GongShu District, Hangzhou Zhejiang CN 310000 "
 MA-S,70B3D5246,"Saline Lectronics, Inc.",710 N Maple Rd Saline MI US 48176 
 MA-S,70B3D5616,Axxess Identification Ltd,27-28 Shrivenham Hundred Business Park Swindon Wiltshire GB SN6 8TZ 
 MA-S,70B3D5CC5,Intecom,ul.Hrustalnaya d11.korp2 Saint-Petersburg SPb RU 192019 
@@ -2028,7 +2041,6 @@ MA-S,70B3D5A76,Pietro Fiorentini,Via Enrico Fermi Arcugnano  IT 36057
 MA-S,70B3D5722,UMAN,"Unit 12, Oxbow Crescent, Esturies, Century City Cape Town Western Cape ZA 7441 "
 MA-S,70B3D5BCE,"YAWATA ELECTRIC INDUSTRIAL CO.,LTD.",1-17-1 Ohmorihigashi Ohta-ku Tokyo JP 143-0012 
 MA-S,70B3D5C65,PEEK TRAFFIC,5401 N SAM HOUSTON PKWY W HOUSTON  US 77086 
-MA-S,70B3D5613,Suprock Technologies,45 Scott Hill Rd Warren NH US 03279 
 MA-S,70B3D58AB,"EMAC, Inc.",2390 EMAC Way Carbondale IL US 62901 
 MA-S,70B3D5729,"EMAC, Inc.",2390 EMAC Way Carbondale IL US 62901 
 MA-S,70B3D5E93,ECON Technology Co.Ltd,Mogan Road 1418-41-4 Hangzhou Zhejiang  CN 310015 
@@ -2513,7 +2525,14 @@ MA-S,70B3D5F10,Riegl Laser Measurement Systems GmbH,Riedenburgstrasse 48 Horn Lo
 MA-S,70B3D5141,M.T. S.R.L.,VIA MONZA 83 GESSATE  IT 20060 
 MA-S,70B3D5C11,Ariston Thermo s.p.a.,Via Aristide Merloni 45 Fabriano Ancona IT 60044 
 MA-S,70B3D5154,"Walk Horizon Technology (Beijing) Co., Ltd.","Rm121 B1 Shouxindasha Building, 5 Jiangtailu Rd., Chaoyang District Beijing  CN 100015 "
-MA-S,70B3D5389,Private,
 MA-S,70B3D5D72,OnYield Inc Ltd,"814 Houston Centre, 63 Mody Road Kowloon  HK TST East "
 MA-S,70B3D5D6A,KnowRoaming,90 Eglinton Ave. E Toronto Ontario - ON CA M4P2Y3 
 MA-S,70B3D5F5F,RFRain LLC,8 THE GREEN SUITE 4510 Dover DE US 19901 
+MA-S,70B3D5EBC,"Refine Technology, LLC","26 Chapin Road, Unit 1107, PO Box 691 Pine Brook NJ US 07058 "
+MA-S,70B3D5389,Private,
+MA-S,70B3D5984,Sanmina Israel,"Koren Industrial Zone , POBox 102 Maalot Israel IL 2101002 "
+MA-S,70B3D50D1,Common Sense Monitoring Solutions Ltd.,"Unit 1, Holts Court Threshers Bush Essex GB CM17 0NS "
+MA-S,70B3D5382,Naval Group,40-42 Rue Du Docteur Finlay PARIS CEDEX 15  FR 75732 
+MA-S,70B3D519F,Koizumi Lighting Technology Corp.,"3-5-2-Chome Higashinakamoto,Higashinari-ku,Osaka  JP 537-0021 "
+MA-S,70B3D5968,LGM Ingénierie,13 avenue Morane Saulnier Vélizy-Villacoublay  FR 78140 
+MA-S,70B3D505E,VITEC,99 rue pierre sémard Chatillon France FR 92320 
