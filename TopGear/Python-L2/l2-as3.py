@@ -16,7 +16,7 @@ from math import sqrt
 class MyMath:
     """
     MyMath class for Assignment #3
-    No Constructor
+    Without Constructor
     """
     def add(self,x,y):
         return x + y

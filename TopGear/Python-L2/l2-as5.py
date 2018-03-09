@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """
-Python L2 Assignment #4
+Python L2 Assignment #5
 
-4.   Write a code to implement the following methods by defining a class called Mymath 
-a) with __init__  
-    1. sqroot
-    2. addition
-    3. subtraction
-    4. multiplication
-    5. division
+5.  Write a code to implement a child class called mathnew and parent classes as sqroot,
+    addition,subtraction, multiplication and division. 
+    
+    Use the super() function to inherit the parent methods.
+
 """
 
 from math import sqrt
