@@ -185,7 +185,7 @@ def main(argv):
 
     # Try parsing the command line...
     try:
-        opts, args = go.getopt(argv,"hui:f:",["ifile=","update","ifilter="])
+        opts, args = go.getopt(argv,"hui:",["ifile=","update"])
     except go.GetoptError:
         usage()
 
