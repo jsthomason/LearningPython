@@ -11,7 +11,7 @@ Python L2 Assignment #5
 
 from math import sqrt
 
-class MyMath:
+class MyMath(object):
     """
     MyMath class for Assignment #4
     With Constructor
@@ -24,25 +24,33 @@ class MyMath:
 
     def add(self,x,y):
         return x + y
-
     
     def div(self,x,y):
         return x / y
 
-
     def mul(self,x,y):
         return x * y
 
-
     def sub(self,x,y):
         return x - y
-
 
     def sqr(self,x):
         return sqrt(x)
 
 
-mm = MyMath()
+class mathnew(MyMath):
+    """
+    mathnew class for Assignment #5
+    """
+    def __init__(self):
+        print("mathnew Constructor")
+        super().__init__()
+
+    def __del__(self):
+        super().__del__()
+        print("mathnew Destructor")
+
+mm = mathnew()
 
 a = 9
 b = 3
