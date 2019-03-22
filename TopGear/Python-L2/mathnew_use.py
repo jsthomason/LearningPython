@@ -16,4 +16,3 @@ print("Testing multiplication module \"mul({0},{1})\" = {2}".format(a, b, MathNe
 print("Testing subtration module \"sub({0},{1})\" = {2}".format(a, b, MathNew.sub(a,b)))
 print("Testing sqroot module \"sqr({0})\" = {1}".format(a, MathNew.sqr(a)))
 
-
