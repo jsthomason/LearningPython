@@ -13,7 +13,7 @@ class BFile(object):
         constructor
         params
             bfname - binary file name to read / write
-            sfmt   = structure format; see help(struct) for fmt details
+            sfmt   - structure format; see help(struct) for fmt details
         '''
         self.fname = bfname
         self.sfmt = sfmt
@@ -86,23 +86,82 @@ class BFile(object):
 
 #########################################################################################
 ## Test Code
+def main(**args):
+    '''
+    Test Code and Examples
 
-bin_file = BFile("test_file.dat","dIII")
+    Structure Format String:
+        The optional first format char indicates byte order, size and alignment:
+      @: native order, size & alignment (default)
+      =: native order, std. size & alignment
+      <: little-endian, std. size & alignment
+      >: big-endian, std. size & alignment
+      !: same as >
+    
+    The remaining chars indicate types of args and must match exactly;
+    these can be preceded by a decimal repeat count:
+      x: pad byte (no data); c:char; b:signed byte; B:unsigned byte;
+      ?: _Bool (requires C99; if not available, char is used instead)
+      h:short; H:unsigned short; i:int; I:unsigned int;
+      l:long; L:unsigned long; f:float; d:double.
+    Special cases (preceding decimal count indicates length):
+      s:string (array of char); p: pascal string (with count byte).
+    Special cases (only available in native format):
+      n:ssize_t; N:size_t;
+      P:an integer type that is wide enough to hold a pointer.
+    Special case (not in native mode unless 'long long' in platform C):
+      q:long long; Q:unsigned long long
+    Whitespace between formats is ignored.
 
-bin_file.writeit(time.time(), 20, 30, 40)
-bin_file.writeit(time.time(), 30, 40, 50, append=True)
-bin_file.writeit(time.time(), 40, 50, 60, append=True)
+    ### EXAMPLE ###
 
-print(bin_file.readit())
+    # Construct the bfile object
+    bin_file = BFile("test_file.dat","dIII") (see string format above)
 
-icmp_time = 0.0
-icmp_min = 0
-icmp_avg = 0
-icmp_max = 0
-for record in bin_file.readit():
-    icmp_time, icmp_min, icmp_avg, icmp_max = tuple(record)
-    print("{} min/avg/max {}/{}/{} ms".format(\
-        time.strftime("%d.%b.%Y %H:%M:%S", time.localtime(icmp_time)),\
-        icmp_min, icmp_avg, icmp_max))
-#        if isinstance(elem, float):
-#            print(time.strftime("%d.%b.%Y %H:%M:%S", time.localtime(elem)))
+    # Write some data to the file according to string format "dIII"
+    bin_file.writeit(time.time(), 20, 30, 40)
+    bin_file.writeit(time.time(), 30, 40, 50, append=True)
+    bin_file.writeit(time.time(), 40, 50, 60, append=True)
+
+    # Print the contents of the file as a List of Tuples
+    print(bin_file.readit())
+
+    # Setup some vars for List / Tuple parsing
+    icmp_time = 0.0
+    icmp_min = 0
+    icmp_avg = 0
+    icmp_max = 0
+
+    # Iterate over the returned List
+    for record in bin_file.readit():
+
+        # Extract the Tuple into prepared vars
+        icmp_time, icmp_min, icmp_avg, icmp_max = tuple(record)
+
+        # Format and print as required
+        print("{} min/avg/max {}/{}/{} ms".format(\\
+            time.strftime("%d.%b.%Y %H:%M:%S", time.localtime(icmp_time)),\\
+            icmp_min, icmp_avg, icmp_max))
+
+    '''
+    bin_file = BFile("test_file.dat","dIII")
+
+    bin_file.writeit(time.time(), 20, 30, 40)
+    bin_file.writeit(time.time(), 30, 40, 50, append=True)
+    bin_file.writeit(time.time(), 40, 50, 60, append=True)
+
+    print(bin_file.readit())
+
+    icmp_time = 0.0
+    icmp_min = 0
+    icmp_avg = 0
+    icmp_max = 0
+    for record in bin_file.readit():
+        icmp_time, icmp_min, icmp_avg, icmp_max = tuple(record)
+        print("{} min/avg/max {}/{}/{} ms".format(\
+            time.strftime("%d.%b.%Y %H:%M:%S", time.localtime(icmp_time)),\
+            icmp_min, icmp_avg, icmp_max))
+
+
+if __name__ == "__main__":
+    main()
