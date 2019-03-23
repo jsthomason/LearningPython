@@ -57,7 +57,7 @@ def main():
 
     print()
 
-    # this show method overriding better...
+    # this shows method overloading better...
     a.method1()
     b.method1()
     c.method1()
